@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.4/moment.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/pumastyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- <script src="fiend.js"></script> -->
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Ticket Fiend</title>
+</head>
+
+<body id="bdy">
+
+    <div class="image">
+        <div id="text">
+            <h1><strong>T<img src="assets/images/magnifying glass.png">CKET FIEND</strong></h1>
+        </div>
+        <div id="links">
+            Need a Ride?
+            <a href="https://www.uber.com/"><img id="uberlink" src="assets/images/uberpic.png"></a>
+            <a href="https://www.lyft.com/"><img id="lyftlink" src="assets/images/lyftpic.png"></a>
+            Follow Us!
+            <a href="https://twitter.com/FiendTicket"><img id="twitter" src="assets/images/twitter.png"></a>
+            <a href="https://www.instagram.com/ticketfiend/"><img id="insta" src="assets/images/insta.jpg"></a>
+        </div>
+        <div class="navbar">
+            <input id="eventName" placeholder="Search Artists, Teams, or Events" required></input>
+            <span class="datepicker">
+                <form action="/action_page.php">
+                    <input id="date" value=" " type="date">
+                </form>
+            </span>
+            <span class="location">
+                <input id="city" placeholder="Enter City"></input>
+            </span>
+            <button id="submitbtn" type="submit">Submit Search</button>
+        </div>
+    </div>
+
+    <table id="results"></table>
+    <form action="" class="zipCode_form modal" id="zipCode" style="display:none">
+        <p><input id="zipInput" type="text" placeholder="Zip Code" style="text-align:center" /></p>
+        <p><input id="zipClick" type="submit" value="Submit" rel="modal:close" /></p>
+    </form>
+    <p id="instructions">OR...Click Pictures for Events in Your Area!</p>
+    <div class="row">
+        <div class="column">
+            <img class="localEvents" id="concert" value="concert" src="assets/images/musicpic.jpg" alt="Concert">
+            <div class="imgtext">Music</div>
+        </div>
+        <div class="column">
+            <img class="localEvents" id="sports" value="sports" src="assets/images/sportspic.jpg" alt="Sports">
+            <div class="imgtext">Sports</div>
+        </div>
+        <div class="column">
+            <img class="localEvents" id="theater" value="theater" src="assets/images/theaterpic.jpg" alt="Theater">
+            <div class="imgtext">Performances</div>
+        </div>
+    </div>
+
+    <div id="animation"></div>
+
+    <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+    <script src="assets/tickets.js"></script>
+    <script src="assets/teampuma.js"></script>
+
+</body>
+
+</html>
